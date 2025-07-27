@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Step tabs</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--[ Favicon]-->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="icon" href="img/favicons/favicon-32x32.png" sizes="32x32">
+</head>
+<body>
+
+  <div class="row">
+    <div class="col-8">
+      <!-- Родительские ссылки -->
+      <ul class="nav nav-tabs" id="parent-tabs">
+        <li class="nav-item"><a class="nav-link" href="#1">Ссылка 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#2">Ссылка 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="#3">Ссылка 3</a></li>
+        <li class="nav-item"><a class="nav-link" href="#4">Ссылка 4</a></li>
+      </ul>
+      <!-- Дочерние ссылки, скрытые по умолчанию -->
+      <div id="child-links" class="nav nav-tabs mt-3">
+        <!-- Ссылки для родителя #1 -->
+        <ul class="nav nav-tabs child-group" data-parent="#1" style="display: none;">
+          <li class="nav-item"><a class="nav-link" href="#1?1">Дочерняя ссылка 1-1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#1?2">Дочерняя ссылка 1-2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#1?3">Дочерняя ссылка 1-3</a></li>
+        </ul>
+        <!-- Ссылки для родителя #2 -->
+        <ul class="nav nav-tabs child-group" data-parent="#2" style="display: none;">
+          <li class="nav-item"><a class="nav-link" href="#2?1">Дочерняя ссылка 2-1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#2?2">Дочерняя ссылка 2-2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#2?3">Дочерняя ссылка 2-3</a></li>
+        </ul>
+        <!-- Ссылки для родителя #3 -->
+        <ul class="nav nav-tabs child-group" data-parent="#3" style="display: none;">
+          <li class="nav-item"><a class="nav-link" href="#3?1">Дочерняя ссылка 3-1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#3?2">Дочерняя ссылка 3-2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#3?3">Дочерняя ссылка 3-3</a></li>
+        </ul>
+        <!-- Ссылки для родителя #4 -->
+        <ul class="nav nav-tabs child-group" data-parent="#4" style="display: none;">
+          <li class="nav-item"><a class="nav-link" href="#4?1">Дочерняя ссылка 4-1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#4?2">Дочерняя ссылка 4-2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#4?3">Дочерняя ссылка 4-3</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-4">
+      <!-- Выпадающий список с родительскими ссылками -->
+      <div class="container-fluid">
+        <div class="d-flex flex-column align-items-end mt-3 mb-3">
+          <label for="parent-select" class="mb-2">Выберите родительскую ссылку:</label>
+          <select id="parent-select" class="form-control w-auto">
+            <option value="#1">Ссылка 1</option>
+            <option value="#2">Ссылка 2</option>
+            <option value="#3">Ссылка 3</option>
+            <option value="#4">Ссылка 4</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 mt-3">
+      <!-- Родительские блоки -->
+      <div class="block parent-block block1"><h4>Родительский блок 1</h4></div>
+      <div class="block parent-block block2"><h4>Родительский блок 2</h4></div>
+      <div class="block parent-block block3"><h4>Родительский блок 3</h4></div>
+      <div class="block parent-block block4"><h4>Родительский блок 4</h4></div>
+
+      <!-- Первые дочерние блоки -->
+      <div class="block block1 child-block 1-1">Блок 1-1</div>
+      <div class="block block1 child-block 1-2">Блок 1-2</div>
+      <div class="block block1 child-block 1-3">Блок 1-3</div>
+      <div class="block block2 child-block 2-1">Блок 2-1</div>
+      <div class="block block2 child-block 2-2">Блок 2-2</div>
+      <div class="block block2 child-block 2-3">Блок 2-3</div>
+      <div class="block block3 child-block 3-1">Блок 3-1</div>
+      <div class="block block3 child-block 3-2">Блок 3-2</div>
+      <div class="block block3 child-block 3-3">Блок 3-3</div>
+      <div class="block block4 child-block 4-1">Блок 4-1</div>
+      <div class="block block4 child-block 4-2">Блок 4-2</div>
+      <div class="block block4 child-block 4-3">Блок 4-3</div>
+
+      <!-- Вторые дочерние блоки -->
+      <div class="block block1 child-block 1-1">Блок 1-1</div>
+      <div class="block block1 child-block 1-2">Блок 1-2</div>
+      <div class="block block1 child-block 1-3">Блок 1-3</div>
+      <div class="block block2 child-block 2-1">Блок 2-1</div>
+      <div class="block block2 child-block 2-2">Блок 2-2</div>
+      <div class="block block2 child-block 2-3">Блок 2-3</div>
+      <div class="block block3 child-block 3-1">Блок 3-1</div>
+      <div class="block block3 child-block 3-2">Блок 3-2</div>
+      <div class="block block3 child-block 3-3">Блок 3-3</div>
+      <div class="block block4 child-block 4-1">Блок 4-1</div>
+      <div class="block block4 child-block 4-2">Блок 4-2</div>
+      <div class="block block4 child-block 4-3">Блок 4-3</div>
+    </div>
+  </div>
+
+<!-- Libs & Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
